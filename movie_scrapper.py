@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import json
 import sys
 
+# this class is responsible for fetching top movies info from given base url
+
 class MovieScrapper():
     def __init__(self, base_url, item_count):
         self.base_url = base_url
@@ -67,7 +69,6 @@ if __name__ == "__main__":
     base_url = sys.argv[1]
     item_count = sys.argv[2]
     movie_scrapper = MovieScrapper(base_url, item_count)
-
 
     try:
         movie_scrapper.fetch_top_movies_link()
